@@ -1,0 +1,9 @@
+﻿START=MQS
+MQS: 	A-Z a-z _->MQ1
+	Α-Ω α-ω έ ύ ί ό ά ή ώ ς->MQ1
+	0-9->BAD
+MQ1: 	0-9->MQ1
+	A-Z a-z _->MQ1
+	Α-Ω α-ω έ ύ ί ό ά ή ώ ς->MQ1
+	\n->GOOD
+GOOD(OK):

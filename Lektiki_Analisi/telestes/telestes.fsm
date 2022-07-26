@@ -1,0 +1,36 @@
+START=TQS
+TQS:	- + %->TQ3
+		\* ->TQ1
+		/->TQ2
+		=->TQ5
+TQ1:	- + %->BAD
+		\* ->TQ4
+		/->BAD
+		=->TQ5
+		\n->GOOD
+TQ2:	- + %->BAD
+		\* ->BAD
+		/->TQ6
+		=->TQ5
+		\n->GOOD
+TQ3:	- + %->BAD
+		\* ->BAD
+		/->BAD
+		=->TQ5
+		\n->GOOD
+TQ4:	- + %->BAD
+		\* ->BAD
+		/->BAD
+		=->TQ5
+		\n->GOOD
+TQ5:	- + %->BAD
+		\* ->BAD
+		/->BAD
+		=->BAD
+		\n->GOOD
+TQ6:	- + %->BAD
+		\* ->BAD
+		/->BAD
+		=->TQ5
+		\n->GOOD
+GOOD(OK):

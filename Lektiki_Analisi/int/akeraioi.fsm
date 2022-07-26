@@ -1,0 +1,16 @@
+START=AQS
+AQS:0 -> AQ2
+    - + -> AQ1
+	1-9 -> AQ3
+AQ2:0 -> AQ2
+	\n ->GOOD
+	- + ->BAD
+	1-9 ->BAD
+AQ1:0 ->AQ2
+    1-9 -> AQ3
+	- + ->BAD
+AQ3:1-9 -> AQ3
+	0->AQ3
+	- + -> BAD
+	\n->GOOD
+GOOD(OK):

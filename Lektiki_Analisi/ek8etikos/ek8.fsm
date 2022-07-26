@@ -1,0 +1,48 @@
+START=EQS
+EQS: 	1-9 ->EQ1
+	- + ->EQ2
+	0 ->EQ3
+	E e->BAD
+	.->EQ8
+EQ1: 	0-9->EQ1
+	.->EQ4
+	- + ->BAD
+	E e-> BAD
+EQ2:	1-9->EQ1
+	. ->EQ8
+	0->EQ3
+	- + -> BAD
+	E e-> BAD
+EQ3:	0 ->EQ3
+	.->EQ4
+	- + -> BAD
+	1-9->BAD
+	E e-> BAD
+EQ4:	0->EQ4
+	1-9->EQ4
+	e E ->EQ5
+	\n->GOOD
+	- + ->BAD
+	. -> BAD
+EQ5: 	- +->EQ6
+	0->EQ7
+	1-9->EQ7
+	.->BAD
+	E e-> BAD
+EQ6:	0->EQ7
+	1-9->EQ7
+	- + ->BAD
+	.->BAD
+	E e-> BAD
+EQ7:	0->EQ7
+	1-9->EQ7
+	- + -> BAD
+	.->BAD
+	E e-> BAD
+	\n->GOOD
+EQ8:	0->EQ4
+	1-9->EQ4
+	- + -> BAD
+	.->BAD
+	E e-> BAD
+GOOD(OK):

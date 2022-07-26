@@ -1,0 +1,119 @@
+
+STRING		("valid operations" , 1)
+
+VARIABLE	(E , 2)
+
+OPERATOR	(= , 2)
+
+INTEGER		(1 , 2)
+
+OPERATOR	(/ , 2)
+
+FLOAT		(.1 , 2)
+
+VARIABLE	(e , 3)
+
+OPERATOR	(//= , 3)
+
+INTEGER		(0 , 3)
+
+OPERATOR	(* , 3)
+
+INTEGER		(11 , 3)
+
+OPERATOR	(+ , 3)
+
+INTEGER		(-12 , 3)
+
+OPERATOR	(- , 3)
+
+INTEGER		(0000 , 3)
+
+VARIABLE	(AAV2 , 4)
+
+OPERATOR	(*= , 4)
+
+FLOAT		(1. , 4)
+
+OPERATOR	(** , 4)
+
+FLOAT		(-2. , 4)
+
+VARIABLE	(ad1a , 5)
+
+OPERATOR	(/= , 5)
+
+FLOAT		(0.121 , 5)
+
+FLOAT		(+1.1 , 5)
+
+VARIABLE	(_asd , 6)
+
+OPERATOR	(%= , 6)
+
+INTEGER		(+1232 , 6)
+
+FLOAT		(-.2E3 , 6)
+
+FLOAT		(+.1e2 , 6)
+
+VARIABLE	(asd_23a , 7)
+
+OPERATOR	(-= , 7)
+
+FLOAT		(.1e-2 , 7)
+
+FLOAT		(+.2 , 7)
+
+FLOAT		(+2.e2 , 7)
+
+OPERATOR	(// , 7)
+
+FLOAT		(.2e+1 , 7)
+
+OPERATOR	(+= , 8)
+
+OPERATOR	(**= , 8)
+
+STRING		("empty string following\n" , 10)
+
+STRING		("" , 11)
+
+STRING		("s\"s" , 12)
+
+STRING		('s"s' , 13)
+
+STRING		('invalid operations' , 31)
+
+Illegal  identifier (int) at  line: 32 	 1BAD 
+[(
+Illegal  identifier (int) at  line: 32 	 +02)*02]^05.3 
+
+Illegal  identifier (variable) at  line: 33 	 b# 
+
+OPERATOR	(= , 33)
+
+Illegal  identifier (variable) at  line: 33 	 e.2 
+
+Illegal  identifier (operator) at  line: 33 	 -.e3 (null)
+
+Illegal  identifier (float) at  line: 33 	 +.e 
+
+OPERATOR	(** , 33)
+
+Illegal  identifier (float) at  line: 33 	 .e 
+\\
+Illegal  identifier (float) at  line: 33 	 0.e 
+
+VARIABLE	(only , 34)
+
+Illegal  identifier (operator) at  line: 34 	 -dot= (null)
+.
+Illegal  identifier (string) at  line: 35 	 " 
+
+Illegal  identifier (comment) at  line: 36 	 """""""""""" 
+Illegal  identifier (string) at  line: 37 	 "s 
+
+Illegal  identifier (variable) at  line: 38 	 s" 
+
+correct 60	wrong 13

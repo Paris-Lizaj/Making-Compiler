@@ -1,0 +1,32 @@
+START=Q0
+Q0:	'->Q1
+	"->Q4
+	\n->BAD
+	\\->BAD
+	*->BAD
+Q1:	'->Q3
+	"->Q1
+	\n->BAD
+	\\->Q2
+	*->Q1
+Q2:	'->Q1
+	"->Q1
+	\n->BAD
+	\\->Q1
+	*->Q1
+Q3:	'->BAD
+	"->BAD
+	\n->GOOD
+	\\->BAD
+	*->BAD
+Q4:	'->Q4
+	"->Q3
+	\n->BAD
+	\\->Q5
+	*->Q4
+Q5:	'->Q4
+	"->Q4
+	\n->BAD
+	\\->Q4
+	*->Q4
+GOOD(OK):
